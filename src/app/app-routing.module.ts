@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminTemplateComponent } from './admin-template/admin-template.component';
 import { CustomersComponent } from './customers/customers.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
 import { AuthenticationGuard } from './guards/authentication.guard';
 import { LoginComponent } from './login/login.component';
 import { NewProductComponent } from './new-product/new-product.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path: "products", component: ProductsComponent},
     {path: "customers", component: CustomersComponent},
     {path: "newProduct", component:NewProductComponent},
+    {path: "editProduct/:id", component: EditProductComponent},
 
   ], canActivate: [AuthenticationGuard]}
 ];
